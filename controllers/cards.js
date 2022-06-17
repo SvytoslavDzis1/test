@@ -11,6 +11,17 @@ exports.getCards = async (req, res) => {
   }
 };
 
+exports.getCards = async (req, res) => {
+  try {
+    const CODE_OK_200 = 200;
+    const cards = await Card.find({});
+    return res.status(CODE_OK_200).send(cards);
+  } catch (err) {
+    const ERROR_CODE_500 = 500;
+    return res.status(ERROR_CODE_500).send({ message: 'Ошибка по умолчанию.' });
+  }
+};
+
 exports.createCard = async (req, res) => {
   try {
     const CODE_OK_201 = 201;

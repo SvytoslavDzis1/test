@@ -8,6 +8,11 @@ router.use('/', usersRouter);
 router.use('/', cardsRouter);
 router.use((req, res) => {
   res.status(404).send({ message: 'Ресурс не найден.' });
+
 });
 
+module.exports = router;
+module.exports = router;
+module.exports = router;
+module.exports = router;
 module.exports = router;
